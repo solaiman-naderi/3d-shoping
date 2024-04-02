@@ -7,13 +7,12 @@ import { models, sizes } from "../constants";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
-
 const Model = () => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
     title: "iPhone 15 pro Natural  Titanium",
     color: ["#8f8a81", "#ffe7b9", "#6f6c64"],
-    image: yellowImg,
+    img: yellowImg,
   });
 
   //camera control for model
@@ -27,6 +26,7 @@ const Model = () => {
   // rotation
   const [smallRotation, setSmallRotation] = useState();
   const [largeRotation, setLargeRotation] = useState();
+
   useGSAP(() => {
     gsap.to("#heading", {
       opacity: 1,
@@ -87,10 +87,8 @@ const Model = () => {
                       key={i}
                       className="w-6 h-6 rounded-full mx-2 cursor-pointer"
                       style={{ backgroundColor: item.color[0] }}
-                      onClick={() => {
-                        setModel(item);
-                      }}
-                    ></li>
+                      onClick={() => setModel(item)}
+                    />
                   ))}
                 </ul>
                 <button className="size-btn-container">

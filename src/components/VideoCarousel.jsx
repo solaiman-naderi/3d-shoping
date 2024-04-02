@@ -60,7 +60,7 @@ const VideoCarousel = () => {
           // get the progress of the video
           const progress = Math.ceil(anim.progress() * 100);
 
-          if (progress != currentProgress) {
+          if (progress !== currentProgress) {
             currentProgress = progress;
 
             // set the width of the progress bar
@@ -101,7 +101,7 @@ const VideoCarousel = () => {
       // update the progress bar
       const animUpdate = () => {
         anim.progress(
-          videoRef.current[videoId].currentTime /
+          videoRef.current[videoId]?.currentTime /
             hightlightsSlides[videoId].videoDuration
         );
       };
