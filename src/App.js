@@ -4,6 +4,7 @@ import Highlights from "./components/Highlight";
 import Model from "./components/Model";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWork";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Model />
       <Features />
       <HowItWorks />
+      <Footer />
     </main>
   );
 };
